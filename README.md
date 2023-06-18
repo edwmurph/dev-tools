@@ -4,10 +4,10 @@ My dev tools CLI
 
 ## Getting Started
 
-Add the following to your .zshrc (tweaks path to repo + node version manager command depending on your setup):
+Add something like the following to your .zshrc:
 
 ```
 function dt() {
-  (cd ~/code/personal/dev-tools && fnm use && node index.mjs "$@")
+  (cd ~/code/personal/dev-tools && node index.mjs "$@")
 }
 ```

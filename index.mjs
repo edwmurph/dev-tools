@@ -6,7 +6,7 @@ import figlet from 'figlet';
 const pkg_json = JSON.parse( readFileSync('./package.json') );
 
 function run_cmd({ bin, args = [] }) {
-  execSync( `${ bin } ${ args.join(' ') }`, { stdio: 'inherit' } );
+  execSync( `${ bin } ${ args.map( i => `'${ i }'` ).join(' ') }`, { stdio: 'inherit' } );
 }
 
 const program = new commander.Command();
